@@ -1,0 +1,12 @@
+version: '2'
+services:
+  client:
+    image: node:13.8
+    container_name: nuxt_practice
+    command: npm run dev
+    working_dir: "/src"
+    ports:
+      - "4230:3000"
+    volumes:
+      - "./client:/src"
+    tty: true
